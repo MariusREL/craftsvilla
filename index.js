@@ -14,3 +14,18 @@ document.addEventListener('scroll', () => {
         logo.setAttribute("src", "./img/CraftsvillaW.png");
     }
 });
+
+function imagetransition(){
+    let images = document.querySelectorAll(".background-image-header")
+    let currentIndex = 0;
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.opacity = i === 0 ? 1 : 0;
+    }
+    setInterval(() => {
+        images[currentIndex].style.opacity = 0
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = 1;
+    }, 5000);
+}
+imagetransition();
