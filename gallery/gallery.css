@@ -12,7 +12,6 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-
 }
 a:link {
   text-decoration: none;
@@ -25,7 +24,7 @@ a:hover {
   text-decoration: underline;
 }
 main {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 .navbar {
@@ -39,6 +38,13 @@ main {
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--showcase-color);
+}
+
+figure:hover{
+    scale: 1.1;
+}
+figure{
+    transition: 1s ease;
 }
 
 #logo-craft {
@@ -94,7 +100,12 @@ main {
 
 figure > img{
     height: 350px;
-    width: auto;
+    width: 300px;
+}
+
+.img-cont{
+    height: 350px;
+    width: 300px;
 }
 #full-logo {
   padding-right: 10%;
@@ -110,14 +121,40 @@ figure > img{
     align-items: center;
     flex: 1 1 auto;
     gap: 5%;
-    background-image: url(./img/canvas2.jpg);
+    background: url(./img/canvas2.jpg) center center/cover no-repeat;
 }
 .gallery-top > * {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.gallery-mid{
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 5%;
+    background: url(./img/canvas2.jpg) center center/cover no-repeat;
+}
+.explore{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
+.gallery-mid  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
 
 
 
