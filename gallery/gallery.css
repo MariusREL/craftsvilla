@@ -1,8 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
+:root {
+  --header-font: "Radio Canada", sans-serif;
+  --showcase-font: "Playfair Display", serif;
+  --showcase-color: #4a4a4a;
+  --workshop-color: #227c9d;
+}
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 
+}
+a:link {
+  text-decoration: none;
+  color: var(--header-font);
+}
+a:visited {
+  color: var(--header-font);
+}
+a:hover {
+  text-decoration: underline;
+}
+main {
+  height: 100vh;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  opacity: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--showcase-color);
+}
+
+#logo-craft {
+  margin-right: auto;
+  font-weight: bold;
+  margin-left: 3rem;
+}
+.nav-items {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  font-family: var(--header-font);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  height: 100%;
+  gap: 25px;
+  flex: 1 1 auto;
+}
+#logo {
+  padding-top: 8%;
+  height: 300px;
+  width: 200px;
+}
+#full-logo {
+  height: 100px;
+  width: auto;
+
+  flex-shrink: 0;
+}
+
+.nav-links {
+  margin-right: 2%;
+}
+.nav-activated {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-activated .nav-items {
+  color: black;
+  text-shadow: none;
+}
+
+.nav-activated a {
+  color: black;
+}
+
+/* Media queuries to support scaling */
+@media screen and (min-width: 1024px) {
+
+figure > img{
+    height: 350px;
+    width: auto;
+}
+#full-logo {
+  padding-right: 10%;
+}
+
+}
+
+.gallery-top{
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 5%;
+    background-image: url(./img/canvas2.jpg);
+}
+.gallery-top > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 auto;
+  font-size: 0.7rem;
+  color: white;
+  font-family: var(--header-font);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  height: 50px;
+  background-color: rgba(231, 202, 202, 0.7);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-arms {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .start-here {
+    width: 700px;
+  }
+  .nav-items {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  #logo-craft {
+    margin-left: 1rem;
+  }
+
+  #logo-craft img {
+    width: 120px;
+  }
+
+  .middle-part {
+    padding: 2rem 1rem;
+    align-items: center;
+  }
+
+  .showCaseOne,
+  .showCaseTwo,
+  .showCaseThree {
+    flex-direction: column !important;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  figure figcaption {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+    order: -1;
+  }
+
+  figure > section {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figure > section > h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-items {
+    font-size: 0.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2%;
+  }
+
+  #logo-craft img {
+    width: 100px;
+    height: 50px;
+  }
+  #full-logo {
+    padding: 0;
+  }
+  figure figcaption {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    max-width: none;
+  }
 }
