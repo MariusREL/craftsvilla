@@ -3,6 +3,7 @@
     --header-font: "Radio Canada", sans-serif;
     --showcase-font: "Playfair Display", serif;
     --showcase-color: #4A4A4A;
+    --workshop-color: #227c9d;
 }
 
 *,
@@ -233,15 +234,77 @@ figure > section > h3{
 }
 
 
+
+
+
+/* workshop section */
+.background-workshop{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+
+}
+.background-workshop img{
+height: 100%;
+width: 100%;
+}
+
 .workshop-container{
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    max-width: 1400px;
     margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.workshop-container > header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: var(--showcase-font);
+    color:#dce6c8;
+    margin-top: 20px;
+}
+
+.workshop-container > header > h3{
+    font-size: 3rem;
+            text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+
+.workshop-container > header > p{
+    max-width: 30%;
+    font-family: var(--showcase-font);
+    color: var(--showcase-color);
+    font-size: 2rem;
 
 }
+
+
+.workshop-container > figure{
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+.workshop-container img{
+    height: 50vh;
+    width: auto;
+    flex: 1 1 auto;
+}
+.workshop-container img:hover
+{
+    scale: 1.1;
+    transition: 2s ease;
+}
+
 
 
 
