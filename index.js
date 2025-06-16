@@ -1,11 +1,7 @@
 const navbar = document.querySelector('.navbar');
 const headerImg = document.querySelector('.header-img');
 const logo = document.querySelector("#logo")
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('img:not([loading])').forEach(img => {
-        img.setAttribute('loading', 'lazy');
-    });
-});
+
 
 document.addEventListener('scroll', () => {
     const headerBottom = headerImg.offsetTop + headerImg.offsetHeight;
@@ -33,4 +29,14 @@ function imagetransition(){
         images[currentIndex].style.opacity = 1;
     }, 5000);
 }
-imagetransition();
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('img:not([loading])').forEach(img => {
+        img.setAttribute('loading', 'lazy');
+    });
+    imagetransition()
+    setTimeout(() => {
+        document.querySelectorAll('.background-image-header[data-src]').forEach(img => {
+            img.src = img.dataset.src;
+        });
+    }, 500); 
+});
