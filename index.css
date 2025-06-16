@@ -102,7 +102,7 @@ main {
 }
 .nav-items{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.2rem;
@@ -122,14 +122,14 @@ main {
 #full-logo{
     height: 100px;
     width: auto;
-
     flex-shrink: 0;
-    
 }
 
 .nav-links{
-        margin-right: 2%
+    justify-content: end;
+    margin-right: 5%;
 }
+
 .nav-activated {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
@@ -345,7 +345,22 @@ footer{
 }
 
 
-
+@media screen and (max-width: 1350px){
+  .img-cont {
+    margin-bottom: 5%;}
+  .explore{margin-top: 0%;}
+  .explore p{
+    max-width: 20%;
+  }
+  .gallery-images
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-mid section{
+    align-items: center;
+  }
+  
 @media screen and (min-width: 1024px){
     .call-to-arms{
         flex-direction: column;
@@ -459,4 +474,4 @@ footer{
         font-size: 1.1rem;
         max-width: none
     }
-}
+}}
