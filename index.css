@@ -20,6 +20,8 @@
     position: relative;
     height: 100vh;
     width: 100%;
+    background-color: #423939;
+    z-index: 0;
 }
 .background-image-header{
     position: absolute;
