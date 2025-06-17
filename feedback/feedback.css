@@ -1,8 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --header-font: "Radio Canada", sans-serif;
+    --showcase-font: "Playfair Display", serif;
+    --showcase-color: #4A4A4A;
+    --workshop-color: #227c9d;
+}
+
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
 
+/* NAV RELATED ITEMS */
+a:link {
+    text-decoration: none;
+    color: var(--header-font);
+}
+
+a:visited {
+    color: var(--header-font);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    opacity: 1;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+}
+
+.large-logo-cont {
+    min-width: 35%;
+    height: 35%;
+}
+
+#logo-craft {
+    margin-right: auto;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--showcase-color);
+    font-size: 1.2rem;
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    height: 100%;
+    gap: 25px;
+    flex: 1 1 auto;
+}
+
+#logo {
+    padding-top: 8%;
+    height: 300px;
+    width: 200px;
+}
+
+#full-logo {
+    height: 100px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    justify-content: end;
+    margin-right: 2%;
+    flex-wrap: wrap;
+}
+
+.nav-activated {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+}
+
+.nav-activated .nav-items {
+    color: black;
+    text-shadow: none;
+}
+
+.nav-activated a {
+    color: black;
 }

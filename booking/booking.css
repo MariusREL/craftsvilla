@@ -57,14 +57,13 @@ a:hover{
     font-weight: bold;
     margin-left: 3rem;
 }
-.nav-items{
+.nav-items {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--showcase-color);
     font-size: 1.2rem;
     font-family: var(--header-font);
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     height: 100%;
@@ -85,7 +84,7 @@ a:hover{
 
 .nav-links{
     justify-content: end;
-    margin-right: 5%;
+    margin-right: 2%;
 }
 
 .nav-activated {
@@ -174,8 +173,7 @@ form h1{
     align-items: center;
 }
 .cto-content{
-    color: white;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    color: var(--showcase-color);
     font-size: 1.5rem;
     letter-spacing: 1.5px;
     max-width: 40vw;
@@ -244,10 +242,12 @@ form h1{
 
 .booking-title {
     font-family: var(--header-font);
-    color: var(--showcase-color);
+    color: black;
     margin-bottom: 1.5rem;
     font-size: 2rem;
     text-align: center;
+    font-weight: 400;
+    letter-spacing: 1.5px;
 }
 
 .section-container {
@@ -481,6 +481,7 @@ form h1{
     font-weight: bold;
     color: var(--workshop-color);
 }
+
 
 /* Media queries */
 @media screen and (max-width: 768px) {

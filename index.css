@@ -111,14 +111,13 @@ main {
     font-weight: bold;
     margin-left: 3rem;
 }
-.nav-items{
+.nav-items {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.2rem;
     font-family: var(--header-font);
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     height: 100%;
@@ -138,7 +137,7 @@ main {
 
 .nav-links{
     justify-content: end;
-    margin-right: 5%;
+    margin-right: 2%;
     flex-wrap: wrap;
 }
 

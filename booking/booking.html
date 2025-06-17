@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./booking.css">
     <script src="./booking.js" defer></script>
-    <title>Craftsvilla</title>
+    <title>Craftsvilla - Book Your Experience</title>
 </head>
 <body>
   <nav class="navbar">
     <ul class="nav-items">
       <li id="logo-craft">
-        <a href="../index.html"><img id="logo" src="./img/CraftsvillaWB.png" alt=""></a>
+        <a href="../index.html"><img id="logo" src="./img/CraftsvillaWB.png" alt="Craftsvilla logo"></a>
       </li>
     </ul>
     <ul class="nav-items">
@@ -24,95 +24,94 @@
   </nav>
   
   <main>
-    <div class="form-container">
-      <h1 class="booking-title">Book Your Experience</h1>
+    <form class="form-container" id="booking-form">
+      <header>
+        <h1 class="booking-title">Book your experience</h1>
+      </header>
       
       <!-- Art Form Selection -->
-      <div class="section-container">
-        <h2 class="section-title">Choose Your Art Form</h2>
-        <div class="art-form-options">
-          <div class="art-option" data-form="watercolour">
-            <div class="art-icon">🖌️</div>
+      <fieldset class="section-container">
+        <legend class="section-title">Choose your art form</legend>
+        <menu class="art-form-options">
+          <li class="art-option" data-form="watercolour">
+            <figure class="art-icon">🖌️</figure>
             <h3>Watercolour</h3>
-          </div>
-          <div class="art-option" data-form="mosaic">
-            <div class="art-icon">🧩</div>
+          </li>
+          <li class="art-option" data-form="mosaic">
+            <figure class="art-icon">🧩</figure>
             <h3>Mosaic</h3>
-          </div>
-          <div class="art-option" data-form="canvas">
-            <div class="art-icon">🎨</div>
+          </li>
+          <li class="art-option" data-form="canvas">
+            <figure class="art-icon">🎨</figure>
             <h3>Canvas</h3>
-          </div>
-        </div>
+          </li>
+        </menu>
         <input type="hidden" name="selected-art-form" id="selected-art-form">
-      </div>
+      </fieldset>
       
       <!-- Participants Section -->
-      <div class="section-container">
-        <h2 class="section-title">Number of Participants</h2>
-        <div class="participants-container">
-          <div class="participants-group">
-            <label for="adult">Adults</label>
+      <fieldset class="section-container">
+        <legend class="section-title">Number of participants</legend>
+        <section class="participants-container">
+          <figure class="participants-group">
+            <figcaption><label for="adult">Adults</label></figcaption>
             <div class="number-input-container">
               <button type="button" class="decrement">-</button>
-              <input type="number" id="adult" value="0" min="0">
+              <input type="number" id="adult" name="adult" value="0" min="0">
               <button type="button" class="increment">+</button>
             </div>
-          </div>
-          <div class="participants-group">
-            <label for="children">Children*</label>
+          </figure>
+          <figure class="participants-group">
+            <figcaption><label for="children">Children*</label></figcaption>
             <div class="number-input-container">
               <button type="button" class="decrement">-</button>
-              <input type="number" id="children" value="0" min="0">
+              <input type="number" id="children" name="children" value="0" min="0">
               <button type="button" class="increment">+</button>
             </div>
-          </div>
-        </div>
-      </div>
+          </figure>
+        </section>
+      </fieldset>
       
       <!-- Package Selection -->
-      <div class="section-container packages-section">
-        <h2 class="section-title">Select Your Package</h2>
-        <div class="package-cards">
-          <div class="package-card" data-package="novice">
-            <div class="package-header">
+      <fieldset class="section-container packages-section">
+        <legend class="section-title">Select your package</legend>
+        <section class="package-cards">
+          <article class="package-card" data-package="novice">
+            <header class="package-header">
               <h3>Novice Package</h3>
               <span class="package-price">$XX</span>
-            </div>
-            <div class="package-content">
-              <!-- You can add package details here -->
+            </header>
+            <section class="package-content">
               <p>Perfect for beginners</p>
               <ul>
-                <li>all-inclusive art-package</li>
+                <li>All-inclusive art-package</li>
                 <li>Breakfast, lunch and dinner</li>
                 <li>Starter guide, written by Rob Boss</li>
               </ul>
-            </div>
-          </div>
+            </section>
+          </article>
           
-          <div class="package-card" data-package="artisan">
-            <div class="package-header">
+          <article class="package-card" data-package="artisan">
+            <header class="package-header">
               <h3>Artisan Package</h3>
               <span class="package-price">$XX</span>
-            </div>
-            <div class="package-content">
-              <!-- You can add package details here -->
+            </header>
+            <section class="package-content">
               <p>For the enthusiast</p>
               <ul>
                 <li>Everything from novice</li>
                 <li>Group pictures</li>
                 <li>Access to the free after-workshop courses on our website</li>
               </ul>
-            </div>
-          </div>
+            </section>
+          </article>
           
-          <div class="package-card" data-package="virtuoso">
-            <div class="package-header">
+          <article class="package-card" data-package="virtuoso">
+            <header class="package-header">
               <h3>Virtuoso Package</h3>
               <span class="package-price">$XX</span>
-            </div>
-            <div class="package-content">
-              <!-- You can add package details here -->
+            </header>
+            <section class="package-content">
               <p>Professional quality</p>
               <ul>
                 <li>Artist-grade materials</li>
@@ -120,21 +119,27 @@
                 <li>On-site child-care for the youngest</li>
                 <li>Our resident artist, Rob Boss, will be personally responsible for your group!</li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </section>
+          </article>
+        </section>
         <input type="hidden" name="selected-package" id="selected-package">
-      </div>
+      </fieldset>
       
-      <button type="submit" class="submit-booking">Book Now</button>
-    </div>
+      <footer>
+        <button type="submit" class="submit-booking">Book Now</button>
+      </footer>
+    </form>
   </main>
   
-  <section class="call-to-arms">
+  <aside class="call-to-arms">
     <article class="cto-content">
-      <figure><img class="adventure" src="./img/adventure.png" alt=""></figure>
-      <p>What are you waiting for, join thousands of other aspiring artists and experience your own creative journey. Remember, there are no mistakes, only happy accidents</p>
+      <figure>
+        <img class="adventure" src="./img/adventure.png" alt="Artistic adventure illustration">
+        <figcaption>
+          <p>What are you waiting for, join thousands of other aspiring artists and experience your own creative journey. Remember, there are no mistakes, only happy accidents</p>
+        </figcaption>
+      </figure>
     </article>
-  </section>
+  </aside>
 </body>
 </html>
