@@ -53,10 +53,14 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 1% 1%;
+    max-height: 35%;
+    margin-bottom: 10%;
 }
 .start-here img{
     height: 50px;
     width: auto;
+    backdrop-filter: blur(6px);
+    border-radius: 100px;
 }
 .start-here a, .start-here button{
     min-width: 200px;
@@ -98,7 +102,10 @@ main {
     justify-content: space-between;
     backdrop-filter: blur(8px);
 }
-
+.large-logo-cont{
+    min-width: 35%;
+    height: 35%;
+}
 #logo-craft{
     margin-right: auto;
     font-weight: bold;
@@ -350,7 +357,7 @@ footer{
 }
 
 
-@media screen and (max-width: 1350px){
+/* @media screen and (max-width: 1350px){
   .img-cont {
     margin-bottom: 5%;}
   .explore{margin-top: 0%;}
@@ -382,7 +389,7 @@ footer{
 .start-here > img{
     scale: 0.7;
     padding: 0;
-}
+} */
 
 
 @media screen and (max-width: 768px) {
@@ -394,6 +401,7 @@ footer{
     }
     .start-here{
         width: 700px;
+        height: 15%;
     }
     .nav-items {
         padding: 0 1rem;
@@ -484,4 +492,4 @@ footer{
         font-size: 1.1rem;
         max-width: none
     }
-}}
+}

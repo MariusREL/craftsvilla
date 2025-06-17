@@ -48,6 +48,8 @@ a:hover{
     flex-direction: row;
     justify-content: space-between;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #logo-craft{
@@ -115,17 +117,7 @@ main{
     justify-content: center;
     align-items: center;
 }
-.form-container {
-    min-height: 50%;
-    min-width: 70%;
-    max-width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.3rem;
-    background-color: white;
-}
+
 .artform{
     display: flex;
     text-align: center;
@@ -164,16 +156,15 @@ form h1{
 .participants-container{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-}
-.participants-container input{
-    min-height: 3rem;
-    max-width: 4rem;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .participants-group{
+    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .call-to-arms{
     flex: 1 1 0;
@@ -218,28 +209,297 @@ form h1{
 }
 
 
-@media screen and (max-width: 768px) {
+/* Navbar fix with background */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    opacity: 1;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-    body{
-        flex-direction:column-reverse;
-    }
-    main{
-        max-width: 100%;
-    }
-    .call-to-arms {
-        padding: 0 15px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10%;
+/* Form container styling */
+.form-container {
+    min-height: 50%;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: white;
+    opacity: 0.8;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 100px auto 50px;
+}
+
+.booking-title {
+    font-family: var(--header-font);
+    color: var(--showcase-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-family: var(--header-font);
+    color: var(--showcase-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Art form option styling */
+.art-form-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.art-option {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.art-option:hover {
+    border-color: var(--workshop-color);
+    transform: translateY(-2px);
+}
+
+.art-option.selected {
+    border-color: var(--workshop-color);
+    background-color: rgba(34, 124, 157, 0.05);
+}
+
+.art-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.art-option h3 {
+    font-family: var(--header-font);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Participants styling */
+.participants-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.participants-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.participants-group label {
+    font-family: var(--header-font);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.number-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.number-input-container button {
+    background: #f1f1f1;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.number-input-container button:hover {
+    background: #e0e0e0;
+}
+
+.number-input-container input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 1.1rem;
+    -moz-appearance: textfield;
+}
+
+.number-input-container input::-webkit-outer-spin-button,
+.number-input-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Package cards styling */
+.packages-section {
+    width: 100%;
+}
+
+.package-cards {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.package-card {
+    flex: 1;
+    min-width: 150px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.package-card:hover {
+    border-color: var(--workshop-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.package-card.selected {
+    border-color: var(--workshop-color);
+    background-color: rgba(34, 124, 157, 0.05);
+}
+
+.package-header {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package-header h3 {
+    font-family: var(--header-font);
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--showcase-color);
+}
+
+.package-price {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--workshop-color);
+}
+
+.package-content {
+    padding: 1rem;
+}
+
+.package-content p {
+    font-family: var(--header-font);
+    margin-bottom: 0.8rem;
+}
+
+.package-content ul {
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+    list-style-type: disc;
+}
+
+.package-content li {
+    font-family: var(--header-font);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    list-style: disc;
+}
+
+/* Submit button */
+.submit-booking {
+    background-color: var(--workshop-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-family: var(--header-font);
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-booking:hover {
+    background-color: #195f77;
+}
+
+/* Total price display */
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+    font-family: var(--header-font);
+}
+
+.total-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--showcase-color);
+}
+
+.total-amount {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--workshop-color);
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 1.5rem;
     }
     
-    .cto-content {
-        max-width: 80vw;
-        font-size: 1.2rem;
+    .art-form-options {
+        flex-direction: column;
     }
     
-    .adventure {
-        max-height: 8vh;
+    .participants-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .package-cards {
+        flex-direction: column;
     }
 }
 
@@ -264,6 +524,13 @@ form h1{
 
 
 @media screen and (max-width: 768px) {
+    body{
+        flex-direction: column-reverse;
+    }
+    .call-to-arms{
+        justify-content: center;
+        margin-top: 20%;
+    }
     .nav-items {
         padding: 0 1rem;
         font-size: 1rem;
@@ -276,9 +543,6 @@ form h1{
     #logo-craft img {
         width: 120px;
     }
-.form-container{
-    width: 100vw;
-}
 }
 
 
@@ -291,7 +555,9 @@ form h1{
         align-items: flex-start;
         margin-top: 2%;
     }
-
+    .call-to-arms{
+        margin-top: 25%;
+    }
     #logo-craft img {
         width: 100px;
         height: 50px;

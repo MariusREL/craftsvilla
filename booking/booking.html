@@ -9,88 +9,132 @@
 </head>
 <body>
   <nav class="navbar">
-  <ul class="nav-items">
-    <li id="logo-craft">
-      <a href="../index.html"
-        ><img id="logo" src="./img/CraftsvillaWB.png" alt=""
-      /></a>
-    </li>
-  </ul>
-  <ul class="nav-items">
-    <img
-      id="full-logo"
-      id="full-logo1"
-      src="../img/full-logo.png"
-      alt="Craftsvilla logo, an illustration of a house with a brush underlining it"
-    />
-  </ul>
-  <ul class="nav-items nav-links">
-    <li><a href="../gallery/gallery.html">Gallery</a></li>
-    <li><a href="../feedback/feedback.html">Testimonials</a></li>
-  </ul>
-</nav>
+    <ul class="nav-items">
+      <li id="logo-craft">
+        <a href="../index.html"><img id="logo" src="./img/CraftsvillaWB.png" alt=""></a>
+      </li>
+    </ul>
+    <ul class="nav-items">
+      <img id="full-logo" src="../img/full-logo.png" alt="Craftsvilla logo, an illustration of a house with a brush underlining it">
+    </ul>
+    <ul class="nav-items nav-links">
+      <li><a href="../gallery/gallery.html">Gallery</a></li>
+      <li><a href="../feedback/feedback.html">Testimonials</a></li>
+    </ul>
+  </nav>
+  
   <main>
+    <div class="form-container">
+      <h1 class="booking-title">Book Your Experience</h1>
       
-        <div class="form-container">
-          <form class="artform">
-            <h1>Select Course</h1>
-            <div class="checkboxes">
-              <div class="checkbox-group">
-                <label for="watercolour-input">Watercolour</label>
-                <input type="checkbox" name="Watercolour" id="watercolour-input">
-              </div>
-
-              <div class="checkbox-group">
-                <label for="mosaic-input">Mosaic</label>
-                <input type="checkbox" name="Mosaic" id="mosaic-input">
-              </div>
-
-              <div class="checkbox-group">
-                <label for="canvas-input">Canvas</label>
-                <input type="checkbox" name="Canvas" id="canvas-input">
-              </div>
-            </div>
-          </form>
-
-          <form class="participants-container">
-            <div class="participants-group">
-              <label for="amount">Group Size</label>
-              <input type="number" name="" id="amount">
-            </div>
-            <div class="participants-group">
-              <label for="adult">Adults</label>
-              <input type="number" name="" id="adult">
-            </div>
-            <div class="participants-group">
-              <label for="children">Children</label>
-              <input type="number" name="" id="children">
-            </div>
-          </form>
-
-          <form class="package-container">              
-            <div class="package-group">
-                <label for="novice">Novice Package</label>
-                <input type="checkbox" name="novice" id="novice">
-              </div>
-
-              <div class="package-group">
-                <label for="mosaic-input">Artisan Package</label>
-                <input type="checkbox" name="Mosaic" id="mosaic-input">
-              </div>
-
-              <div class="package-group">
-                <label for="canvas-input">Virtuoso Package</label>
-                <input type="checkbox" name="Canvas" id="canvas-input"></form>
+      <!-- Art Form Selection -->
+      <div class="section-container">
+        <h2 class="section-title">Choose Your Art Form</h2>
+        <div class="art-form-options">
+          <div class="art-option" data-form="watercolour">
+            <div class="art-icon">🖌️</div>
+            <h3>Watercolour</h3>
+          </div>
+          <div class="art-option" data-form="mosaic">
+            <div class="art-icon">🧩</div>
+            <h3>Mosaic</h3>
+          </div>
+          <div class="art-option" data-form="canvas">
+            <div class="art-icon">🎨</div>
+            <h3>Canvas</h3>
+          </div>
         </div>
+        <input type="hidden" name="selected-art-form" id="selected-art-form">
+      </div>
+      
+      <!-- Participants Section -->
+      <div class="section-container">
+        <h2 class="section-title">Number of Participants</h2>
+        <div class="participants-container">
+          <div class="participants-group">
+            <label for="adult">Adults</label>
+            <div class="number-input-container">
+              <button type="button" class="decrement">-</button>
+              <input type="number" id="adult" value="1" min="0">
+              <button type="button" class="increment">+</button>
+            </div>
+          </div>
+          <div class="participants-group">
+            <label for="children">Children</label>
+            <div class="number-input-container">
+              <button type="button" class="decrement">-</button>
+              <input type="number" id="children" value="0" min="0">
+              <button type="button" class="increment">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Package Selection -->
+      <div class="section-container packages-section">
+        <h2 class="section-title">Select Your Package</h2>
+        <div class="package-cards">
+          <div class="package-card" data-package="novice">
+            <div class="package-header">
+              <h3>Novice Package</h3>
+              <span class="package-price">$XX</span>
+            </div>
+            <div class="package-content">
+              <!-- You can add package details here -->
+              <p>Perfect for beginners</p>
+              <ul>
+                <li>all-inclusive art-package</li>
+                <li>Breakfast, lunch and dinner</li>
+                <li>Starter guide, written by Rob Boss</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="package-card" data-package="artisan">
+            <div class="package-header">
+              <h3>Artisan Package</h3>
+              <span class="package-price">$XX</span>
+            </div>
+            <div class="package-content">
+              <!-- You can add package details here -->
+              <p>For the enthusiast</p>
+              <ul>
+                <li>Everything from novice</li>
+                <li>Group pictures</li>
+                <li>Access to the free after-workshop courses on our website</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="package-card" data-package="virtuoso">
+            <div class="package-header">
+              <h3>Virtuoso Package</h3>
+              <span class="package-price">$XX</span>
+            </div>
+            <div class="package-content">
+              <!-- You can add package details here -->
+              <p>Professional quality</p>
+              <ul>
+                <li>Artist-grade materials</li>
+                <li>Professional tools</li>
+                <li>On-site child-care for the youngest</li>
+                <li>Our resident artist, Rob Boss, will be personally responsible for your group!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="selected-package" id="selected-package">
+      </div>
+      
+      <button type="submit" class="submit-booking">Book Now</button>
+    </div>
   </main>
+  
   <section class="call-to-arms">
     <article class="cto-content">
       <figure><img class="adventure" src="./img/adventure.png" alt=""></figure>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, porro ad ab quidem laborum ipsam tenetur quam commodi optio libero eius fugiat quasi quibusdam ipsa officia? </p>
+      <p>What are you waiting for, join thousands of other aspiring artists and experience your own creative journey. Remember, there are no mistakes, only happy accidents</p>
     </article>
   </section>
 </body>
-  
-  <label for="mosaic-input"></label>
-  
 </html>
