@@ -232,7 +232,7 @@ form h1{
     align-items: center;
     border-radius: 0.5rem;
     background-color: white;
-    opacity: 0.8;
+    opacity: 1;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 100px auto 50px;
