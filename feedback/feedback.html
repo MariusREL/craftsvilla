@@ -4,99 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./feedback.css">
-    <script src="./index.js" defer></script>
-    <title>Craftsvilla</title>
+    <script src="./feedback.js" defer></script>
+    <title>Craftsvilla - Testimonials</title>
 </head>
 <body>
      <main>    
         <nav class="navbar">
-        <ul class="nav-items">
-            <li id="logo-craft">
-                <a href="../index.html"><img id="logo" src="../img/CraftsvillaB.png" alt=""></a>
-            </li>
-        </ul>
-        <ul class="nav-items">
-            <img id="full-logo" src="../img/full-logo.png"
-                alt="Craftsvilla logo, an illustration of a house with a brush underlining it">
-        </ul>
-        <ul class="nav-items nav-links">
-            <li><a href="../gallery/gallery.html">Gallery</a></li>
-            <li><a href="../booking/booking.html">Booking</a></li>
-        </ul>
+            <ul class="nav-items">
+                <li id="logo-craft">
+                    <a href="../index.html"><img id="logo" src="../img/CraftsvillaB.png" alt="Craftsvilla logo"></a>
+                </li>
+            </ul>
+            <ul class="nav-items">
+                <img id="full-logo" src="../img/full-logo.png"
+                    alt="Craftsvilla logo, an illustration of a house with a brush underlining it">
+            </ul>
+            <ul class="nav-items nav-links">
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../booking/booking.html">Booking</a></li>
+            </ul>
         </nav>
+        
+        <!-- Feedback Form Section -->
         <section class="feedback-form-container">
-
-            <h1>How was your stay?</h1>
-            <form></form>
-
+            <form class="feedback-form">
+                <h1>Share Your Experience</h1>
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course Attended</label>
+                    <select id="course" name="course">
+                        <option value="" disabled selected>Select a course</option>
+                        <option value="watercolour">Watercolour</option>
+                        <option value="mosaic">Mosaic</option>
+                        <option value="canvas">Canvas</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="rating-container">
+                        <div class="rating-scale">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <input type="range" min="1" max="10" value="8" id="rating" name="rating">
+                        <div class="selected-rating">8/10</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review">Your Review</label>
+                    <textarea id="review" name="review" rows="5" placeholder="Share your experience with us"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-feedback">Submit Feedback</button>
+            </form>
         </section>
 
+        <!-- Testimonials Section -->
         <section class="feedback-container">
             <h1>What previous attendees think about us</h1>
-            <section class="feedback1">
+            
+            <div class="feedback-cards-grid">
                 <article class="feedback-card">
-                    <div class="top">
+                    <div class="card-header">
                         <div class="portrait">
-                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="">
+                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="Portrait of Betina">
                         </div>
                         <div class="personalia">
-                            <p>Betina & husband</p>
+                            <h3>Betina & husband</h3>
                             <p>Age: 26</p>
                             <p>Course: Mosaic</p>
                         </div>
                     </div>
-                    <p class="review">"weeEEEEEEEE"</p>
+                    <div class="rating-display">
+                        <span class="rating-score">9</span>
+                        <span class="rating-max">/10</span>
+                    </div>
+                    <p class="review">"weee"</p>
                 </article>
-            </section>
-            <section class="feedback2">
+                
                 <article class="feedback-card">
-                    <div class="top">
+                    <div class="card-header">
                         <div class="portrait">
-                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="">
+                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="Portrait of Michael">
                         </div>
                         <div class="personalia">
-                            <p>Betina & husband</p>
-                            <p>Age: 26</p>
-                            <p>Course: Mosaic</p>
+                            <h3>Jaurund</h3>
+                            <p>Age: 29</p>
+                            <p>Course: Snuskoking</p>
                         </div>
                     </div>
-                    <p class="review">"weeEEEEEEEE"</p>
+                    <div class="rating-display">
+                        <span class="rating-score">8</span>
+                        <span class="rating-max">/10</span>
+                    </div>
+                    <p class="review">"Tror vi havna på feil plass, alle andre drev med kunst, mens vi dro fram heksegryta vår og begynte å mekke snus. Rob Boss hadde mye å lære vekk, og jeg vil gi erfaringen en 8/10"</p>
                 </article>
-            </section>
 
-            <section class="feedback3">
                 <article class="feedback-card">
-                    <div class="top">
+                    <div class="card-header">
                         <div class="portrait">
-                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="">
+                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="Portrait of Sarah">
                         </div>
                         <div class="personalia">
-                            <p>Betina & husband</p>
-                            <p>Age: 26</p>
-                            <p>Course: Mosaic</p>
+                            <h3>Sarah & friends</h3>
+                            <p>Age: 29</p>
+                            <p>Course: Canvas</p>
                         </div>
                     </div>
-                    <p class="review">"weeEEEEEEEE"</p>
+                    <div class="rating-display">
+                        <span class="rating-score">10</span>
+                        <span class="rating-max">/10</span>
+                    </div>
+                    <p class="review">"Our girls' weekend at Craftsvilla exceeded all expectations! The canvas painting session was therapeutic and fun. The location is beautiful and we loved the personal attention from the staff."</p>
                 </article>
-            </section>
 
-            <section class="feedback4">
                 <article class="feedback-card">
-                    <div class="top">
+                    <div class="card-header">
                         <div class="portrait">
-                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="">
+                            <img src="./img/c51d5a12-9125-4656-bc73-5bc57a2b531d.png" alt="Portrait of David">
                         </div>
                         <div class="personalia">
-                            <p>Betina & husband</p>
-                            <p>Age: 26</p>
+                            <h3>David</h3>
+                            <p>Age: 42</p>
                             <p>Course: Mosaic</p>
                         </div>
                     </div>
-                    <p class="review">"weeEEEEEEEE"</p>
+                    <div class="rating-display">
+                        <span class="rating-score">7</span>
+                        <span class="rating-max">/10</span>
+                    </div>
+                    <p class="review">"I came to Craftsvilla on a company team-building event. The mosaic workshop was engaging and brought our team closer together. Some materials could be improved, but overall a great experience."</p>
                 </article>
-            </section>
+            </div>
         </section>
-
     </main>
+    
+    <script>
+        // Simple script to update the rating display value
+        document.getElementById('rating').addEventListener('input', function() {
+            document.querySelector('.selected-rating').textContent = this.value + '/10';
+        });
+    </script>
 </body>
 </html>
