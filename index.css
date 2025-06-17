@@ -342,6 +342,10 @@ figure > section > h3{
 #watercolour, #canvas-title{
     height: 50px;
 }
+.courses {
+    max-height: 200px;
+    width: auto;
+}
 
 
 footer{
