@@ -92,10 +92,11 @@ main {
     width: 100%;
     height: 80px;
     opacity: 1;
-    z-index: 1;
+    z-index: 10;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    backdrop-filter: blur(8px);
 }
 
 #logo-craft{
@@ -131,6 +132,7 @@ main {
 .nav-links{
     justify-content: end;
     margin-right: 5%;
+    flex-wrap: wrap;
 }
 
 .nav-activated {
@@ -271,7 +273,7 @@ figure > section > h3{
     width: 100%;
     min-height: 120vh;
     background: url('./img/kelli-tungay-Sj0nhVIb4eY-unsplash.jpg') center center/cover no-repeat;
-    z-index: 0;
+    z-index: -1;
     padding-bottom: 3rem;
 }
 .workshop-container > header{
@@ -372,14 +374,10 @@ footer{
     }
 }
 
-#full-logo{
-    padding-right: 10%;
-}
 
 #large-logo{
     height: 200px;
     width: auto;
-    margin-right: 2%;
 }
 .start-here > img{
     scale: 0.7;
@@ -457,12 +455,19 @@ footer{
 }
 
 @media screen and (max-width: 480px) {
+
     .nav-items {
         font-size: 0.5rem;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: 2%;
+       padding: 0;
+       margin-top: 2%;
+       gap: 10%;
+    }
+    .nav-links{
+        height: 50px;
+        padding: 0;
     }
 
     #logo-craft img {
@@ -470,6 +475,8 @@ footer{
         height: 50px;
     }
     #full-logo{
+        height: 50px;
+        
         padding: 0;
     }
     figure figcaption {

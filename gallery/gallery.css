@@ -38,6 +38,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  backdrop-filter: blur(8px);
 }
 
 figure:hover{
@@ -180,7 +181,7 @@ figcaption > img {
 }
 
 #image1, #image2, #image3, #image4{
-    height: 500px;
+    max-height: 500px;
     width: auto;
     z-index: -1;
 }
