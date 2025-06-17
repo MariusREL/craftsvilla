@@ -16,6 +16,7 @@
 }
 a {
     display: inline-block;
+    max-height: 100%;
 }
 
 /* Sliding picture */
@@ -114,6 +115,7 @@ main {
     justify-content: end;
 }
 #logo-craft{
+    max-height: 100%;
     margin-right: auto;
     font-weight: bold;
     margin-left: 3rem;
@@ -132,8 +134,7 @@ main {
     flex: 1;
 }
 #logo{
-    height: 300px;
-    width: 200px;
+    max-height: 80px
 }
 #full-logo{
     min-height: 50px;
@@ -386,13 +387,13 @@ footer{
         align-items: center;
     }
     
-        .large-logo-cont{
-        background-color: white;
-        opacity: 0.8;
-        border-radius: 20px;
-        height: 20%;
-        max-width: 280px;
-        align-items: center;
+    .large-logo-cont{
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    height: 20%;
+    max-width: 280px;
+    align-items: center;
     }
         #large-logo{
         height: 125px;
