@@ -120,7 +120,6 @@ body{
 main {
     display: flex;
     margin-top: 80px;
-    padding: 2rem;
     min-height: calc(100vh - 80px);
 }
 
