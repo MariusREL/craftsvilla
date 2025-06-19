@@ -72,14 +72,12 @@ a:hover{
 }
 #logo{
     padding-top: 8%;
-    height: 300px;
+    height: 200px;
     width: 200px;
 }
 #full-logo{
     height: 100px;
     width: auto;
-    flex-shrink: 0;
-    padding-left: 35%;
 }
 
 .nav-links{
@@ -176,7 +174,8 @@ form h1{
     color: var(--showcase-color);
     font-size: 1.5rem;
     letter-spacing: 1.5px;
-    max-width: 40vw;
+    max-width: 80%;
+    min-width: 20svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,8 +197,8 @@ form h1{
 }
 
 .adventure {
-    max-height: 10vh; 
     width: auto;
+    min-width: 50px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -228,13 +227,14 @@ form h1{
     min-height: 50%;
     width: 80%;
     max-width: 800px;
+    min-width: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     background-color: white;
-    opacity: 0.8;
+    opacity: 1;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 100px auto 50px;
@@ -355,6 +355,7 @@ form h1{
     text-align: center;
     font-size: 1.1rem;
     -moz-appearance: textfield;
+    appearance:calc();
 }
 
 .number-input-container input::-webkit-outer-spin-button,
@@ -542,7 +543,7 @@ form h1{
     }
 
     #logo-craft img {
-        width: 120px;
+        width: 100px;
     }
 }
 
