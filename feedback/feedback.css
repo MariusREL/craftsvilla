@@ -78,7 +78,7 @@ a:hover {
     letter-spacing: 2.5px;
     height: 100%;
     gap: 25px;
-    flex: 1 1 auto;
+    flex: 1;
 }
 
 #logo {

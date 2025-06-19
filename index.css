@@ -59,7 +59,7 @@
 .start-here img{
     height: 50px;
     width: auto;
-    backdrop-filter: blur(6px);
+    background-color: grey;
     border-radius: 100px;
 }
 .start-here a, .start-here button{
@@ -122,7 +122,7 @@ main {
     letter-spacing: 2.5px;
     height: 100%;
     gap: 25px;
-    flex: 1 1 auto;
+    flex: 1;
 }
 #logo{
     padding-top: 8%;
@@ -197,7 +197,7 @@ main {
     margin-right: 20%;
     flex-direction: row-reverse;
 }
-.showCaseOne figcaption, .showCaseTwo figcaption, .showCaseThree figcaption{
+.showCaseOne figcaption, .showCaseTwo figcaption,.showCaseThree figcaption{ 
     font-family: var(--showcase-font);
     color: var(--showcase-color);
     font-size: 1.3rem;
