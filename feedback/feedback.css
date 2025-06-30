@@ -104,7 +104,7 @@ a:hover {
 
 .nav-activated {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;rr
+    transition: all 0.3s ease;
 }
 
 .nav-activated .nav-items {
